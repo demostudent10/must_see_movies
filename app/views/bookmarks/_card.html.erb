@@ -6,14 +6,10 @@
   <div class="card-body">
     <dl class="mb-1">
       <dt>User</dt>
-      <!-- Display user_id start -->
       <dd><%= bookmark.user_id %></dd>
-      <!-- Display user_id end -->
 
       <dt>Movie</dt>
-      <!-- Display movie_id start -->
       <dd><%= bookmark.movie_id %></dd>
-      <!-- Display movie_id end -->
 
     </dl>
 
@@ -22,7 +18,6 @@
         <%= link_to_show_or_back bookmark, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
       </div>
 
-      <!-- Edit link bookmark start -->
       <div class="col">
         <% if current_user == @bookmark.user %>
           <%= link_to edit_bookmark_url(bookmark), class: "btn btn-block btn-sm btn-outline-secondary" do %>
@@ -30,9 +25,7 @@
           <% end %>
         <% end %>
       </div>
-      <!-- Edit link bookmark end -->
 
-      <!-- Delete link bookmark start -->
       <div class="col">
         <% if current_user == @bookmark.user %>
           <%= link_to bookmark, method: :delete, data: { confirm: "Do you really want to delete this bookmark?" }, class: "btn btn-block btn-outline-secondary" do %>
@@ -40,7 +33,6 @@
           <% end %>
         <% end %>
       </div>
-      <!-- Delete link bookmark end -->
     </div>
   </div>
 
